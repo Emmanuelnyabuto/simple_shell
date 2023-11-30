@@ -1,1 +1,1 @@
-imple shell group project with Kelvin
+Simple shell group project with Kelvin
