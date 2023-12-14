@@ -3,8 +3,8 @@
 /**
  * input_buf - buffer chained commands
  * @info: parameter struct
- * @buf: addres of buffer
- * @len: addres of len var
+ * @buf: address of buffer
+ * @len: address of len var
  *
  * Return: bytes read
  */
@@ -45,10 +45,10 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input -it get a line minus the new line
+ * get_input - get a line minus the newline
  * @info: parameter struct
  *
- * Return: bytes should read
+ * Return: bytes read
  */
 ssize_t get_input(info_t *info)
 {
@@ -90,7 +90,7 @@ ssize_t get_input(info_t *info)
 }
 
 /**
- * read_buf - reads a buffer
+ * read_buf - read a buffer
  * @info: parameter struct
  * @buf: buffer
  * @i: size
@@ -110,7 +110,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
- * _getline -it gets the next line of input from STDIN
+ * _getline - get the next line of input from STDIN
  * @info: parameter struct
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
@@ -158,7 +158,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 
 /**
  * sigintHandler - blocks ctrl-C
- * @sig_num: the signal number
+ * @sig_num: signal number
  *
  * Return: void
  */

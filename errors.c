@@ -2,7 +2,7 @@
 
 /**
  *_eputs - print input string
- * @str: string to be printed
+ * @str: the string to be printed
  *
  * Return: Nothing
  */
@@ -20,8 +20,8 @@ void _eputs(char *str)
 }
 
 /**
- * _eputchar - write the character c to stderr
- * @c: character to print
+ * _eputchar - writes the character c to stderr
+ * @c: Character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -65,11 +65,11 @@ int _putfd(char c, int fd)
 }
 
 /**
- *_putsfd - print an input string
+ *_putsfd - prints an input string
  * @str: string to be printed
- * @fd: the filedescriptor to write to
+ * @fd: filedescriptor to write to
  *
- * Return: the number of chars put
+ * Return: number of chars put
  */
 int _putsfd(char *str, int fd)
 {

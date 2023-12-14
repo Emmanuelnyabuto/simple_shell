@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _strcpy -it copies a string
- * @dest: the only destination
- * @src: its source
+ * _strcpy - copies string
+ * @dest: destination
+ * @src: source
  *
- * Return: pointers to destination
+ * Return: pointer to destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -23,10 +23,10 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup -to duplicate a string
- * @str: the string to be duplicated
+ * _strdup - duplicates string
+ * @str: string to duplicate
  *
- * Return: pointer to the duplicated string
+ * Return: pointer to duplicated string
  */
 char *_strdup(const char *str)
 {
@@ -43,4 +43,45 @@ char *_strdup(const char *str)
 	for (length++; length--;)
 		ret[length] = *--str;
 	return (ret);
+}
+
+/**
+ *_puts - prints input string
+ *@str: string to be printed
+ *
+ * Return: Nothing
+ */
+void _puts(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
+
+/**
+ * _putchar - writes character c to stdout
+ * @c: Character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	static int i;
+	static char buf[WRITE_BUF_SIZE];
+
+	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	{
+		write(1, buf, i);
+		i = 0;
+	}
+	if (c != BUF_FLUSH)
+		buf[i++] = c;
+	return (1);
 }
