@@ -1,1 +1,1 @@
-Simple shell group project with Kelvin MIRUKA
+Simple shell group project
